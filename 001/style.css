@@ -1,22 +1,27 @@
+/* 设置颜色变量，便于后期对边框颜色的调整（只需要调整这一个地方，其他引入变量的颜色都会改变） */
 :root{
     --success-color:#2ecc71;
-    --error-color:#e74c3c
+    --error-color: #e74c3c;
+    /* 小tips：屁股忘记加;的话，颜色的前面不会显示小方块 */
 }
-/* 设置颜色变量，便于后期对边框颜色的调整（只需要调整这一个地方，其他引入变量的颜色都会改变） */
 
-/* 页面重置 */
+/* 页面重置，避免与默认样式冲突 */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* 将盒子的border和padding包含在width内，更便于设置盒子的宽高 */
 }
 
 body{
-    background-color: #f9fafb;
+    background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    /* 弹性布局 */
     align-items: center;
+    /* 将弹性元素的所有项目垂直居中对齐且盒子由内容撑开,内部内容不居中 */
     justify-content: center;
+    /* 水平对齐弹性容器的项目 */
     min-height: 100vh;
 }
 
@@ -24,23 +29,27 @@ body{
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* 参数依次为：水平阴影（右）垂直阴影（下）阴影模糊距离（距离大于阴影） 阴影颜色 */
+    /* 默认阴影位置在正下方，前两个参数是让阴影沿着X/Y坐标轴移动的距离，当模糊距离大于移动距离的时候，看起来就像是给四周都加了阴影 */
     width: 400px;
 }
 
 h2{
     text-align: center;
     margin: 0 0 20px;
+    /* margin参数：2个时 上下|左右；3个时 上|左右|下；4个时 上|右|下|左 */
 }
 
 .form{
     padding: 30px 40px;
+    /* 参数同margin */
 }
 
 .form-control{
     margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
-    /* 父相子绝 */
+    /* 父相子绝：子元素要用绝对定位时，父元素应添加相对定位 */
 }
 
 .form-control label{
@@ -61,6 +70,7 @@ h2{
 .form-control input:focus{
     border-color: #777;
     outline: none;
+    /* 清除聚焦时默认的黑色框 */
 }
 
 .form-control.success input{
@@ -84,6 +94,7 @@ h2{
 
 .form-control.error small{
     visibility: visible;
+    /* 错误提示出现 */
 }
 
 .form button{

@@ -1,13 +1,14 @@
-// get element
+// get element  获取类名为变量名
 const form = document.getElementById('form');
-const usrname = document.getElementById('usename');
+const usrname = document.getElementById('usrname');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
-//show inpuot error message 
+//show input error message 
 function showError(input, message){
     const formControl = input.parentElement;
+    // 返回input的父元素-formControl，仍然是获取类名为变量名
     formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
     small.innerText = message;
@@ -89,6 +90,7 @@ form.addEventListener('submit',function(e) {
     // }else{
     //     showSuccess(password2);
     // }
+    // 麻烦方法 ↑
     checkRequired([usrname,email,password,password2]);
     checkLength(usrname, 3, 15);
     checkLength(password, 6, 12);
