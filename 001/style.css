@@ -74,6 +74,7 @@ h2{
 }
 
 .form-control.success input{
+    /* 一个标签同时满足两个类名的样式，两个类名之间一定不能有空格 */
     border-color: var(--success-color);
     /* 引入颜色变量 */
 }
