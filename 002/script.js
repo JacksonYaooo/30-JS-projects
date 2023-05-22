@@ -16,7 +16,8 @@ function updateSelectedCount(){
 
     const selectedSeatsCount = selectedSeats.length;
     count.innerText = selectedSeatsCount;
-    total.innerText = selectedSeatsCount * ticketPrice;
+    const ticketPrice2 = localStorage.getItem('selectedMoviePrice');
+    total.innerText = selectedSeatsCount * ticketPrice2;
 }
 
 // 保存电影索引值与票价
