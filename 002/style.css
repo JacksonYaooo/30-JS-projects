@@ -8,10 +8,13 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
+    /* 作为列，垂直地显示弹性项目 */
     align-items: center;
-    justify-content: center;
+    /* align-items属性为弹性容器内的项目指定默认对齐方式 */
     height: 100vh;
+    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    /* 规定一下字体的规格，避免不同设备的效果不同 */
     margin: 0;
 }
 
@@ -47,6 +50,7 @@ body {
 
 /* 走廊效果 */
 .seat:nth-of-type(2){
+    /* 选取同一父元素下的第2个.seat元素 */
     margin-right: 18px;
 }
 .seat:nth-last-of-type(2){
@@ -54,21 +58,27 @@ body {
 }
 
 .seat:not(.occupied):hover{
+    /* :not()反选伪类选择器 */
     cursor: pointer;
     transform: scale(1.2);
+    /* 缩放倍数 */
 }
 
-.showcase .seat:not(.occupied):hover{
+.showcase .seat:hover{
     cursor: default;
+    /* 不出现小手 */
     transform: scale(1);
 }
 
 .showcase{
     border-color: rgba(0, 0, 0, 0.1);
+    /* rgba(红, 绿, 蓝, 透明度) */
     padding: 5px 10px;
     border-radius: 5px;
     color: #777;
+    /* 字体颜色 */
     list-style-type: none;
+    /* list-style-type设置列表项标记的类型 */
     display: flex;
     justify-content: space-between;
 }
@@ -86,6 +96,7 @@ body {
 
 .container{
     perspective: 1000px;
+    /* 立方体的收缩由 perspective 属性定义,它的值越小,视角越深 */
     margin-bottom: 30px;
 }
 
@@ -95,6 +106,7 @@ body {
     width: 100%;
     margin: 15px 0;
     transform: rotateX(-45deg);
+    /* 沿X轴旋转-45度 */
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 

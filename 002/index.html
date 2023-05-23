@@ -11,6 +11,7 @@
     <h1>欢迎来到M·Y在线影院</h1>
     <div class="movie-container">
         <label>选择影片:</label>
+        <!-- label用于表单绑定，这里只有一个表单，不需要绑定 -->
         <select id="movie">
             <option value="32">《寄生虫》(票价:32元)</option>
             <option value="35">《小丑》(票价:35元)</option>
@@ -18,12 +19,14 @@
             <option value="30">《玩具总动员》(票价:30元)</option>
             <!-- value对应的是电影的票价 -->
         </select>
+        <!-- select-option是提供选项表单的用法 -->
     </div>
 
     <ul class="showcase">
         <li>
             <div class="seat"></div>
             <small>可选</small>
+            <!-- small使文本的字体变小一号 -->
         </li>
         <li>
             <div class="seat selected"></div>
@@ -39,6 +42,7 @@
         <div class="screen"></div>
 
         <div class="row">
+            <!-- col指的是列，row指的是行，一行8个座位 -->
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
