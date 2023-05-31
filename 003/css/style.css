@@ -13,13 +13,20 @@ body{
     margin: 0;
 }
 
+input[type="range"] {
+    width: 100%; /* 设置宽度 */
+    margin-right: 10px;
+  }
+
 h1{
     color: #fff;
 }
 
+
 .screen{
     cursor: pointer;
     width: 60%;
+    object-fit: fill;
     background-color: #000;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -46,6 +53,8 @@ h1{
 
 .controls .fa-play{
     color: #28a745;
+    width: 22.86px;
+    /* 由于pause键比play键多2px，所以给play键加个同样的宽度 */
 }
 .controls .fa-stop{
     color: #dc3545;
@@ -60,6 +69,7 @@ h1{
 /* 点击时不显示边框 */
 
 @media(max-width:800px){
+    /* 当屏幕的最大尺寸为800px——即屏幕尺寸小于等于800px时，样式如下 */
     .screen,.controls{
         width: 90%;
     }

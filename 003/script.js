@@ -27,7 +27,7 @@ function updatePlayIcon(){
 function updateProgress(){
     // console.log(vedio.currentTime);// 视频播放时长
     // console.log(video.duration);// 视频总时长
-    progress.value = video.currentTime / video.duration * 100;
+    progress.value = video.currentTime / video.duration * 100; // 进度条，*100是因为规定进度条的value值为0-100
 
     // 获取分钟数
     let mins = Math.floor(video.currentTime / 60)// 向下取整
@@ -40,8 +40,7 @@ function updateProgress(){
         secs = "0" + String(secs);
     }
 
-    //
-    timestamp.innerHTML = `${mins}:${secs}`;
+    timestamp.innerHTML = `${mins}:${secs}`;// 时间戳
 }
 
 // 重置并停止视频

@@ -11,6 +11,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
+    /* 作为列，垂直地显示弹性项目 */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -33,7 +34,7 @@ p{
     border-radius: 5px;
     padding: 5px 12px;
     font-size: 12px;
-    border: none;
+    border: 1px solid var(--prmary-color);
 }
 
 .money-img{
@@ -60,6 +61,12 @@ p{
     font-size: 30px;
     text-align: right;
 }
+#amount-two::-webkit-outer-spin-button,
+#amount-two::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
+/* 取消input框为number时的上下箭头 */
+
 
 .swap-rate-container{
     display: flex;
@@ -82,3 +89,4 @@ select:focus,input:focus,button:focus{
         width: 200px;
     }
 }
+/* 弹性显示 */
