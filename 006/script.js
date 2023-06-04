@@ -13,4 +13,4 @@ close.addEventListener('click',() => modal.classList.remove("show-modal"));
 
 window.addEventListener('click', e => 
     e.target == modal ? modal.classList.remove("show-modal") : false);
-    // 三元表达式：相当于if else，  格式：条件句 ？ 成立执行语句 ：不成立执行语句 
+    // 三元表达式：相当于if else，  格式为：条件句 ？ 成立执行语句 ：不成立执行语句 
