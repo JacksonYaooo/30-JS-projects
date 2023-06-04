@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MODAL_MENU_SLIDER</title>
+</head>
+<body>
+    <nav id="nav">
+        <div class="logo">
+            <img src="img/img.png" alt="logo">
+        </div>
+        <ul>
+            <li><a href="">主页</a></li>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">课程介绍</a></li>
+            <li><a href="">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>欢迎来到米修在线</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, expedita odit.</p>
+        <!-- lorem10 表示生成10个单词 -->
+        <button class="cta-btn" id="open">登录</button>
+    </header>
+
+    <div class="container">
+        <h2>为什么选择米修在线？</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit explicabo similique perferendis dolores laudantium! Quisquam odio quasi incidunt libero architecto dolores voluptate, temporibus, dolorem ipsam distinctio id culpa? Est, dolores.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, autem? Temporibus ipsum tempora veniam, non ex unde minima perspiciatis quo.</p>
+        <h2>我们的教学宗旨</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptas doloremque accusantium dolor! Non unde alias doloremque quam repudiandae quidem ipsam quibusdam provident adipisci animi et dignissimos dolor eum, quisquam obcaecati iure nam ut delectus. In fugit tempora iusto quae?</p>
+        <h2>我们的优势</h2>
+        <ul>
+            <li>丰富的在线课程</li>
+            <li>优秀的师资团队</li>
+            <li>课后辅导即问答</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam, nihil aliquid consequatur illo modi blanditiis tempora perspiciatis voluptatum atque adipisci accusamus ea reprehenderit necessitatibus officiis quisquam ipsum praesentium id facere. Consequatur labore laboriosam enim. Nobis nostrum sed libero debitis mollitia ex, voluptates, quasi, reiciendis explicabo reprehenderit aut ut? Aut eaque nulla quod quibusdam maiores quos sint excepturi quae, distinctio perferendis tempora eveniet sed harum. Doloribus aspernatur facilis at voluptatum.</p>
+    </div>
+
+    <!-- modal -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>登录</h3>
+            </div>
+            <div class="modal-content">
+                <p>登录了解更多课程及促销活动</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="请输入姓名" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" placeholder="请输入邮箱" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">密码</label>
+                        <input type="password" id="password" placeholder="请输入密码" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">确认密码</label>
+                        <input type="password" id="password2" placeholder="请再次输入密码" class="form-input">
+                    </div>
+                    <input type="submit" value="提交" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
